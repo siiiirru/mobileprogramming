@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/moyamoyaregular"
+        android:text="제목"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="415dp"
+        android:layout_height="416dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/category">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#FFF1CC">
+
+            <TextView
+                android:id="@+id/first"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/moyamoyaregular"
+                android:text="1위 :"
+                android:textSize="34sp" />
+
+            <EditText
+                android:id="@+id/firstinput"
+                android:layout_width="315dp"
+                android:layout_height="135dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="입력하세요."
+                android:inputType="textMultiLine" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#E3E0E0">
+
+            <TextView
+                android:id="@+id/second"
+                android:layout_width="79dp"
+                android:layout_height="49dp"
+                android:fontFamily="@font/moyamoyaregular"
+                android:hint="입력하세요."
+                android:text="2위 :"
+                android:textSize="34sp" />
+
+            <EditText
+                android:id="@+id/secondinput"
+                android:layout_width="277dp"
+                android:layout_height="135dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="입력하세요."
+                android:inputType="textMultiLine" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#E3D7CA">
+
+            <TextView
+                android:id="@+id/third"
+                android:layout_width="79dp"
+                android:layout_height="49dp"
+                android:fontFamily="@font/moyamoyaregular"
+                android:hint="입력하세요."
+                android:text="3위 :"
+                android:textSize="34sp" />
+
+            <EditText
+                android:id="@+id/thirdinput"
+                android:layout_width="321dp"
+                android:layout_height="135dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="입력하세요."
+                android:inputType="textMultiLine" />
+
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/done"
+        android:layout_width="169dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#4455AC"
+        android:text="입력 완료"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+    <Button
+        android:id="@+id/goback"
+        android:layout_width="168dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#91B9C1"
+        android:text="뒤로가기"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/done" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

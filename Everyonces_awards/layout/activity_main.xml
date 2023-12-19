@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/makeawds"
+        android:layout_width="248dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="318dp"
+        android:backgroundTint="#FBC14D"
+        android:fontFamily="@font/dangdanghae"
+        android:text="연말결산 어워즈 \n만들기"
+        android:textColor="#141325"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/makeprize"
+        android:layout_width="247dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="45dp"
+        android:backgroundTint="#C2E65E"
+        android:fontFamily="@font/dangdanghae"
+        android:text="상 만들기"
+        android:textColor="#141325"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/makeawds" />
+
+    <ToggleButton
+        android:id="@+id/sound"
+        android:layout_width="73dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="148dp"
+        android:background="@android:drawable/ic_lock_silent_mode_off"
+        android:backgroundTint="#596F8F"
+        android:text="ToggleButton"
+        android:textColor="#FDFDF9"
+        android:textOff="OFF"
+        android:textOn="ON"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/makeprize" />
+</androidx.constraintlayout.widget.ConstraintLayout>

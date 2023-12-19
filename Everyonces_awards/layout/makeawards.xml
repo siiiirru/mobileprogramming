@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#070C2B">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="229dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/moyamoyaface"
+        android:text="연말결산 어워즈"
+        android:textColor="#FADC4B"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.widget.Button
+        android:id="@+id/gohome"
+        android:layout_width="58dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/house"
+        android:backgroundTint="#F9DB4B"
+        android:fontFamily="@font/dangdanghae"
+        android:text="홈"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="63dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="이름: "
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="213dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="1dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        android:textColor="#F8F3F3"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/butname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="3dp"
+        android:text="저장"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintStart_toEndOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@id/gohome" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="396dp"
+        android:layout_height="550dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView8">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#54A7A8A7">
+
+                <android.widget.Button
+                    android:id="@+id/song"
+                    android:layout_width="346dp"
+                    android:layout_height="75dp"
+                    android:background="#00FDCFCF"
+                    android:fontFamily="@font/moyamoyaregular"
+                    android:onClick="goinput"
+                    android:text="노래"
+                    android:textColor="#FBF1F8"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/songok"
+                    android:layout_width="46dp"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@android:drawable/checkbox_on_background" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#08FFFEFE">
+
+                <android.widget.Button
+                    android:id="@+id/movie"
+                    android:layout_width="346dp"
+                    android:layout_height="75dp"
+                    android:background="#00FDCFCF"
+                    android:fontFamily="@font/moyamoyaregular"
+                    android:onClick="goinput"
+                    android:text="영화"
+                    android:textColor="#FBF1F8"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/movieok"
+                    android:layout_width="46dp"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@android:drawable/checkbox_on_background" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#54A7A8A7">
+
+                <android.widget.Button
+                    android:id="@+id/drama"
+                    android:layout_width="346dp"
+                    android:layout_height="75dp"
+                    android:background="#00FDCFCF"
+                    android:fontFamily="@font/moyamoyaregular"
+                    android:onClick="goinput"
+                    android:text="드라마"
+                    android:textColor="#FBF1F8"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/dramaok"
+                    android:layout_width="46dp"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@android:drawable/checkbox_on_background" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#08FFFEFE">
+
+                <android.widget.Button
+                    android:id="@+id/book"
+                    android:layout_width="346dp"
+                    android:layout_height="75dp"
+                    android:background="#00FDCFCF"
+                    android:fontFamily="@font/moyamoyaregular"
+                    android:onClick="goinput"
+                    android:text="책"
+                    android:textColor="#FBF1F8"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/bookok"
+                    android:layout_width="46dp"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@android:drawable/checkbox_on_background" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#54A7A8A7">
+
+                <android.widget.Button
+                    android:id="@+id/friends"
+                    android:layout_width="346dp"
+                    android:layout_height="75dp"
+                    android:background="#00FDCFCF"
+                    android:fontFamily="@font/moyamoyaregular"
+                    android:onClick="goinput"
+                    android:text="친구"
+                    android:textColor="#FBF1F8"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/friendsok"
+                    android:layout_width="46dp"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@android:drawable/checkbox_on_background" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#08FFFEFE">
+
+                <android.widget.Button
+                    android:id="@+id/fashion"
+                    android:layout_width="346dp"
+                    android:layout_height="75dp"
+                    android:background="#00FDCFCF"
+                    android:fontFamily="@font/moyamoyaregular"
+                    android:onClick="goinput"
+                    android:text="옷/패션아이템"
+                    android:textColor="#FBF1F8"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/fashionok"
+                    android:layout_width="46dp"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@android:drawable/checkbox_on_background" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#54A7A8A7">
+
+                <android.widget.Button
+                    android:id="@+id/food"
+                    android:layout_width="346dp"
+                    android:layout_height="75dp"
+                    android:background="#00FDCFCF"
+                    android:fontFamily="@font/moyamoyaregular"
+                    android:onClick="goinput"
+                    android:text="음식/맛집"
+                    android:textColor="#FBF1F8"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/foodok"
+                    android:layout_width="46dp"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@android:drawable/checkbox_on_background" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#08FFFEFE">
+
+                <android.widget.Button
+                    android:id="@+id/travle"
+                    android:layout_width="346dp"
+                    android:layout_height="75dp"
+                    android:background="#00FDCFCF"
+                    android:fontFamily="@font/moyamoyaregular"
+                    android:onClick="goinput"
+                    android:text="여행지"
+                    android:textColor="#FBF1F8"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/travleok"
+                    android:layout_width="46dp"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@android:drawable/checkbox_on_background" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#54A7A8A7">
+
+                <android.widget.Button
+                    android:id="@+id/smile"
+                    android:layout_width="346dp"
+                    android:layout_height="75dp"
+                    android:background="#00FDCFCF"
+                    android:fontFamily="@font/moyamoyaregular"
+                    android:onClick="goinput"
+                    android:text="나를 웃게한 일"
+                    android:textColor="#FBF1F8"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/smileok"
+                    android:layout_width="46dp"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@android:drawable/checkbox_on_background" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#08FFFEFE">
+
+                <android.widget.Button
+                    android:id="@+id/sad"
+                    android:layout_width="346dp"
+                    android:layout_height="75dp"
+                    android:background="#00FDCFCF"
+                    android:fontFamily="@font/moyamoyaregular"
+                    android:onClick="goinput"
+                    android:text="나를 슬프게 한 일"
+                    android:textColor="#FBF1F8"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/sadok"
+                    android:layout_width="46dp"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@android:drawable/checkbox_on_background" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#54A7A8A7">
+
+                <android.widget.Button
+                    android:id="@+id/angry"
+                    android:layout_width="346dp"
+                    android:layout_height="75dp"
+                    android:background="#00FDCFCF"
+                    android:fontFamily="@font/moyamoyaregular"
+                    android:onClick="goinput"
+                    android:text="나를 화나게 한 일"
+                    android:textColor="#FBF1F8"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/angryok"
+                    android:layout_width="46dp"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@android:drawable/checkbox_on_background" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#08FFFEFE">
+
+                <android.widget.Button
+                    android:id="@+id/good"
+                    android:layout_width="346dp"
+                    android:layout_height="75dp"
+                    android:background="#00FDCFCF"
+                    android:fontFamily="@font/moyamoyaregular"
+                    android:onClick="goinput"
+                    android:text="뿌듯했던 일"
+                    android:textColor="#FBF1F8"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/goodok"
+                    android:layout_width="46dp"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    app:srcCompat="@android:drawable/checkbox_on_background" />
+
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="204dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#ECCA4D"
+        android:fontFamily="@font/dangdanghae"
+        android:text="결과보기"
+        android:textColor="#221E1E"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="142dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="244dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#777571"
+        android:fontFamily="@font/dangdanghae"
+        android:text="초기화"
+        android:textColor="#221E1E"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
